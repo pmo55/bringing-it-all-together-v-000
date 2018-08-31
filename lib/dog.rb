@@ -77,7 +77,7 @@ class Dog
     sql = <<-SQL
     SELECT * FROM dogs WHERE name = ?
     SQL
-    DB[:conn].execute(sql, self.name)
+    DB[:conn].execute(sql, self.name).map do |row|
   end
   def update
     sql = <<-SQL
