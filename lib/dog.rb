@@ -66,6 +66,7 @@ class Dog
     else
       dog = Self.create(name: name, breed: breed)
     end
+    dog
   end
   def update
     sql = <<-SQL
