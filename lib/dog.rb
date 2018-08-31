@@ -31,6 +31,7 @@ class Dog
     breed = row[2]
     dog=self.new(id: id,name: name,breed: breed)
   end
+  
   def save
     if self.id
       self.update
@@ -81,6 +82,7 @@ class Dog
       self.new_from_db(row)
     end.first
   end
+  
   def update
     sql = <<-SQL
     UPDATE dogs
